@@ -62,7 +62,7 @@ if ( ! function_exists( 'handicraft_setup' ) ) :
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'handicraft_custom_background_args', array(
-			'default-color' => '429ca5',
+			'default-color' => 'ffffff',
 			'default-image' => get_template_directory_uri() . '/images/papertexture.jpg',
 		) ) );
 
@@ -88,6 +88,7 @@ if ( ! function_exists( 'handicraft_setup' ) ) :
 				'#4cb0c1',
 				'#e06e53',
 				'#9dbc71',
+				'#ffffff',
 			),
 		) );
 	}

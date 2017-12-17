@@ -374,7 +374,7 @@ html {
 body {
 	background-repeat: repeat;
 	background-size: 550px auto !important;
-	background: #429ca5;
+	background: #fff;
 	/* Fallback for when there is no custom background color defined. */
 }
 
@@ -1336,6 +1336,10 @@ p.has-drop-cap:first-letter {
 	font-family: "Merriweather Sans", Helvetica, Arial, sans-serif;
 	font-style: normal;
 	line-height: 1.6;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
 }
 .wp-block-pullquote.alignleft > p,
 .wp-block-pullquote.alignright > p {
@@ -1382,8 +1386,8 @@ p.has-drop-cap:first-letter {
 }
 
 .wp-block-separator.alignwide {
-	width: 66vw;
-	max-width: 66vw;
+	width: 75vw;
+	max-width: 75vw;
 }
 
 .wp-block-separator.alignfull {
@@ -1401,6 +1405,10 @@ p.has-drop-cap:first-letter {
 	font-weight: bold;
 	letter-spacing: 1px;
 	font-size: 14px;
+}
+.wp-block-button.aligncenter {
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .wp-block-button a {
@@ -1453,11 +1461,11 @@ p.has-drop-cap:first-letter {
 
 	.alignwide {
 		left: 50%;
-		margin-left: -33vw;
+		margin-left: -37.5vw;
 		clear: both;
 		position: relative;
-		width: 66vw;
-		max-width: 66vw;
+		width: 75vw;
+		max-width: 75vw;
 	}
 
 	.alignwide img,
