@@ -46,3 +46,26 @@ if ( ! function_exists( 'handicraft_excerpt_more' ) ) :
 	}
 	add_filter( 'excerpt_more', 'handicraft_excerpt_more' );
 endif;
+
+
+/**
+ * Add dropdown icon if menu item has children.
+ *
+ * @param  string $title The menu item's title.
+ * @param  object $item  The current menu item.
+ * @param  array  $args  An array of wp_nav_menu() arguments.
+ * @param  int    $depth Depth of menu item. Used for padding.
+ * @return string $title The menu item's title with dropdown icon.
+ */
+function handicraft_dropdown_icon_to_menu_link( $title, $item, $args, $depth ) {
+	if ( 'menu-1' === $args->theme_location ) {
+		foreach ( $item->classes as $value ) {
+			if ( 'menu-item-has-children' === $value || 'page_item_has_children' === $value ) {
+				$title = $title . "^";
+			}
+		}
+	}
+
+	return $title;
+}
+add_filter( 'nav_menu_item_title', 'handicraft_dropdown_icon_to_menu_link', 10, 4 );
