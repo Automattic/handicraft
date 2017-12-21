@@ -905,6 +905,9 @@ body:after {
 	background-position: -500px 0;
 	position: absolute;
 	left: 0;
+	top: 0;
+}
+body.admin-bar:before {
 	top: 32px;
 }
 body:after {

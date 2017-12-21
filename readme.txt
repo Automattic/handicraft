@@ -9,11 +9,9 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called handicraft.
-
 == Description ==
 
-Description
+Handicraft is a Gutenberg-ready theme for arts and crafts businesses.
 
 == Installation ==
 
@@ -25,12 +23,12 @@ Description
 
 = Does this theme support any plugins? =
 
-handicraft includes support for Infinite Scroll in Jetpack.
+Handicraft includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
-= 1.0 - May 12 2015 =
-* Initial release
+= 1.0 - Dec. 17 2017 =
+* Alpha release
 
 == Credits ==
 
