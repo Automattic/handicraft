@@ -30,3 +30,19 @@ function handicraft_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'handicraft_pingback_header' );
+
+/**
+ * Replaces "[...]" (appended to automatically generated excerpts) with ... and a 'Continue reading' link.
+ * @return string 'Continue reading' link prepended with an ellipsis.
+ */
+if ( ! function_exists( 'handicraft_excerpt_more' ) ) :
+	function handicraft_excerpt_more( $more ) {
+		$link = sprintf( '<a href="%1$s" class="more-link">%2$s</a>',
+			esc_url( get_permalink( get_the_ID() ) ),
+			/* translators: %s: Name of current post */
+			sprintf( esc_html__( 'Continue reading %s', 'handicraft' ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
+			);
+		return ' &hellip; ' . $link;
+	}
+	add_filter( 'excerpt_more', 'handicraft_excerpt_more' );
+endif;
