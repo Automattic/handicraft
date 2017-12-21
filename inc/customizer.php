@@ -2,7 +2,7 @@
 /**
  * handicraft Theme Customizer
  *
- * @package handicraft
+ * @package Handicraft
  */
 
 /**

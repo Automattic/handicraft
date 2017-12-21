@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package handicraft
+ * @package Handicraft
  */
 
 if ( ! function_exists( 'handicraft_posted_on' ) ) :

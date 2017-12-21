@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package handicraft
+ * @package Handicraft
  */
 
 /**
@@ -29,7 +29,7 @@ function handicraft_jetpack_setup() {
 	// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
 		'blog-display'   => 'content',
-		'author-bio'     => true,
+		'author-bio'     => false,
 		'avatar-default' => false,
 		'post-details'   => array(
 			'stylesheet' => 'handicraft-style',
@@ -58,7 +58,6 @@ function handicraft_jetpack_setup() {
 	add_theme_support( 'jetpack-social-menu', 'svg' );
 }
 add_action( 'after_setup_theme', 'handicraft_jetpack_setup' );
-
 
 /**
  * Custom render function for Infinite Scroll.
@@ -113,5 +112,19 @@ function handicraft_social_menu() {
 		return;
 	} else {
 		jetpack_social_menu();
+	}
+}
+
+/**
+* Custom function to get the URL of a post thumbnail;
+* If Jetpack is not available, fall back to wp_get_attachment_image_src()
+*/
+function handicraft_get_attachment_image_src( $post_id, $post_thumbnail_id, $size ) {
+	if ( function_exists( 'jetpack_featured_images_fallback_get_image_src' ) ) {
+		return jetpack_featured_images_fallback_get_image_src( $post_id, $post_thumbnail_id, $size );
+	} else {
+		$attachment = wp_get_attachment_image_src( $post_thumbnail_id, $size ); // Attachment array
+		$url = $attachment[0]; // Attachment URL
+		return $url;
 	}
 }
