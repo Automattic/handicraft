@@ -271,8 +271,8 @@ optgroup,
 textarea {
 	color: #555;
 	font-family: Lato, Helvetica, Arial, sans-serif;
-	font-size: 18px;
-	line-height: 1.5;
+	font-size: 16px;
+	line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -287,23 +287,23 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1 {
-	font-size: 42px;
-}
-
-h2 {
 	font-size: 36px;
 }
 
-h3 {
+h2 {
 	font-size: 24px;
 }
 
-h4 {
+h3 {
 	font-size: 18px;
 }
 
-h5 {
+h4 {
 	font-size: 16px;
+}
+
+h5 {
+	font-size: 14px;
 }
 
 h6 {
@@ -922,20 +922,20 @@ body:after {
 	padding-top: 8em;
 }
 .site-content {
-	padding: 1.6em 3.2em;
-	width: 75%;
-	max-width: 800px;
+	padding: 1.6em 0;
+	width: 92%;
+	max-width: 850px;
 	margin: 0 auto;
 }
 .site-branding {
-	padding: 0 3.2em;
+	padding: 0;
 	margin: 0 auto 1.6em;
-	width: 75%;
-	max-width: 800px;
+	width: 92%;
+	max-width: 850px;
 }
 .site-title {
 	margin: 0;
-	font-size: 64px;
+	font-size: 36px;
 }
 .site-title a,
 .site-title a:visited {
@@ -1533,6 +1533,38 @@ p.has-drop-cap:first-letter {
 
 @media screen and (min-width: 768px) {
 
+	body {
+		font-size: 18px;
+	}
+
+	.site-title {
+		font-size: 64px;
+	}
+
+	h1 {
+		font-size: 42px;
+	}
+
+	h2 {
+		font-size: 36px;
+	}
+
+	h3 {
+		font-size: 24px;
+	}
+
+	h4 {
+		font-size: 18px;
+	}
+
+	h5 {
+		font-size: 16px;
+	}
+
+	h6 {
+		font-size: 14px;
+	}
+
 	.menu-toggle {
 		display: none;
 	}
@@ -1668,5 +1700,13 @@ p.has-drop-cap:first-letter {
 
 	.main-navigation li.current-menu-item ~ li.current-menu-item > a {
 		opacity: 1;
+	}
+}
+
+@media screen and ( min-width: 900px ) {
+	.site-content,
+	.site-branding {
+		width: 75%;
+		padding: 1.6em 3.2em;
 	}
 }
