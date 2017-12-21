@@ -144,6 +144,17 @@ function handicraft_scripts() {
 add_action( 'wp_enqueue_scripts', 'handicraft_scripts' );
 
 /**
+ * Add a pingback url auto-discovery header for singularly identifiable articles.
+ */
+function handicraft_pingback_header() {
+	if ( is_singular() && pings_open() ) {
+		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
+	}
+}
+add_action( 'wp_head', 'handicraft_pingback_header' );
+
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
@@ -204,7 +215,6 @@ function handicraft_fonts_url() {
 	return $fonts_url;
 
 }
-
 
 /** 
  * Gutenberg Editor Styles 
