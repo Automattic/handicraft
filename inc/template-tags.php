@@ -134,3 +134,40 @@ function handicraft_post_thumbnail() {
 	<?php endif; // End is_singular().
 }
 endif;
+
+if ( ! function_exists( 'handicraft_mobile_featured_images' ) ) :
+/**
+ * Display smaller featured images for small screens
+ * @param int     $id    Post ID
+ * @param string  $size  Post thumbnail size
+ */
+function handicraft_mobile_featured_image( int $id, $size = 'large' ) {
+
+	if ( handicraft_has_post_thumbnail( $id ) ) :
+
+		$image = handicraft_get_attachment_image_src( $id, get_post_thumbnail_id( $id ), $size );
+
+		//Set quality to 80 for better performance with minimal loss of quality
+		$image = add_query_arg( 'quality', '80', $image );
+
+		//Remove resize arg for mobile; we'll set a smaller width
+		$small_image = remove_query_arg( 'resize', $image );
+		$small_image = add_query_arg( 'w', '768', $small_image );
+
+		/* 
+		 * Inline styles for post thumbnails
+		 * Smaller screens get smaller images
+		 */
+		$css  = '@media screen and ( max-width: 768px ) {';
+		$css .= '#handicraft-image-' . $id . '{ background-image: url(' . esc_url_raw( $small_image ) . '); } }';
+		$css .= '@media screen and ( min-width: 769px ) {';
+		$css .= '#handicraft-image-' . $id . '{ background-image: url(' . esc_url_raw( $image ) . '); } }';
+	?>
+		<style type="text/css" id="handicraft-css-<?php echo esc_attr( $id ); ?>">
+			<?php echo $css; ?>
+		</style>
+		<div class="entry-thumbnail" id="handicraft-image-<?php echo esc_attr( $id ); ?>"></div>
+<?php endif;
+}
+endif;
+

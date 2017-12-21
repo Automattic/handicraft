@@ -1574,6 +1574,17 @@ p.has-drop-cap:first-letter {
 		width: 100%;
 	}
 
+	.main-navigation .dropdown:before {
+		display: inline-block;
+		content: "\25BC";
+		margin-left: .6em;
+		font-size: 10px;
+		line-height: 1;
+		vertical-align: middle;
+		position: relative;
+		top: -2px;
+	}
+
 	.main-navigation ul {
 		display: block;
 		width: 100%;
@@ -1637,6 +1648,10 @@ p.has-drop-cap:first-letter {
 		color: white;
 		font-size: 14px;
 		padding: .6em 1.2em;
+	}
+
+	.main-navigation ul ul .dropdown {
+		display: none;
 	}
 
 	.main-navigation ul ul ul a {

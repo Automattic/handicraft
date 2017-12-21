@@ -40,6 +40,18 @@
 				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 			<?php
 			endif; ?>
+
+			<?php if ( has_nav_menu( 'jetpack-social-menu' ) || class_exists( 'WooCommerce' ) ) : ?>
+				<div class="social-wrapper">
+					<?php handicraft_social_menu(); ?>
+
+					<?php // Add Woocommerce Cart to header if Woocommerce exists
+						if ( class_exists( 'WooCommerce' ) ) {
+							handicraft_woocommerce_header_cart();
+						}
+					?>
+				</div>
+			<?php endif; ?>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">

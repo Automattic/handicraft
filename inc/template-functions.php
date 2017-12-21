@@ -61,7 +61,7 @@ function handicraft_dropdown_icon_to_menu_link( $title, $item, $args, $depth ) {
 	if ( 'menu-1' === $args->theme_location ) {
 		foreach ( $item->classes as $value ) {
 			if ( 'menu-item-has-children' === $value || 'page_item_has_children' === $value ) {
-				$title = $title . "^";
+				$title = $title . "<span class='dropdown'><span class='screen-reader-text'>" . esc_html__( 'Open Submenu', 'handicraft' ) . "</span></span>";
 			}
 		}
 	}
