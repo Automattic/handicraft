@@ -1583,6 +1583,17 @@ p.has-drop-cap:first-letter {
 		display: inline-block;
 	}
 
+	.main-navigation li:after {
+		color: #429ca5;
+		content: "|";
+		display: inline-block;
+		margin-left: .2em;
+	}
+
+	.main-navigation li:last-of-type:after {
+		display: none;
+	}
+
 	.main-navigation ul li:hover > ul ul,
 	.main-navigation ul li.focus > ul ul {
 		top: 0;
@@ -1608,6 +1619,18 @@ p.has-drop-cap:first-letter {
 
 	.main-navigation ul ul li {
 		border-top: 1px dashed rgba(255,255,255,0.25);
+	}
+
+	.main-navigation ul ul:first-of-type li:first-of-type {
+		border-top: 0;
+	}
+
+	.main-navigation ul ul ul:first-of-type li:first-of-type {
+		border-top: 1px dashed rgba(255,255,255,0.25);
+	}
+
+	.main-navigation ul ul li:after {
+		display: none;
 	}
 
 	.main-navigation ul ul a {
