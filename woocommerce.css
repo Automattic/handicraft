@@ -229,7 +229,7 @@ table.cart .product-remove a
 	text-align: center;
 	text-decoration: none;
 
-	color: #c9544b;
+	color: #eaa553;
 	border: 0;
 	border-radius: 100%;
 	box-shadow: none;
@@ -237,7 +237,7 @@ table.cart .product-remove a
 table.cart .product-remove a:hover
 {
 	color: #fff;
-	background: #c9544b;
+	background: #eaa553;
 }
 
 table.cart .product-thumbnail
@@ -486,7 +486,7 @@ ul.products li.product .button {
 }
 
 .onsale {
-	background: #c9544b;
+	background: #eaa553;
 	color: white;
 	border-radius: 100%;
 	display: block;
@@ -1069,13 +1069,13 @@ ul.products li.product .button {
 
 .woocommerce-MyAccount-navigation li:hover>a,
 .woocommerce-MyAccount-navigation li.focus>a {
-	background: #c9544b;
+	background: #eaa553;
 	border-radius: 3px;
 	color: #fff;
 }
 
 .woocommerce-MyAccount-navigation li.is-active a {
-	background: #242d36;
+	background: #429ca5;
 	border-radius: 3px;
 	color: #fff;
 }
@@ -1105,7 +1105,7 @@ ul.products li.product .button {
 }
 
 .woocommerce-MyAccount-navigation ul ul a {
-	background: #242d36;
+	background: #429ca5;
 	color: #fff;
 	font-weight: 400;
 	text-transform: none;
@@ -1228,7 +1228,7 @@ ul.products li.product .button {
 
 .site-header-cart:hover .icon,
 .site-header-cart.focus .icon {
-	fill: #c9544b;
+	fill: #eaa553;
 }
 
 .site-header-cart .count {
@@ -1268,13 +1268,13 @@ ul.products li.product .button {
 .site-header-cart.focus>li>a,
 .site-header-cart>li:hover>a,
 .site-header-cart>li.focus>a {
-	background: #c9544b;
+	background: #eaa553;
 	border-radius: 3px;
 	color: #fff;
 }
 
 .site-header-cart li.is-active a {
-	background: #242d36;
+	background: #429ca5;
 	border-radius: 3px;
 	color: #fff;
 }
@@ -1287,7 +1287,7 @@ ul.products li.product .button {
 }
 
 .site-header-cart .widget_shopping_cart_content {
-	background: #242d36;
+	background: #429ca5;
 	color: #fff;
 }
 
@@ -1305,7 +1305,7 @@ ul.products li.product .button {
 }
 
 .site-header-cart .widget_shopping_cart_content .woocommerce-mini-cart__buttons a {
-	background: #c9544b;
+	background: #eaa553;
 }
 
 .site-header-cart ul ul ul {
@@ -1314,7 +1314,7 @@ ul.products li.product .button {
 }
 
 .site-header-cart ul ul a {
-	background: #242d36;
+	background: #429ca5;
 	color: #fff;
 	font-weight: 400;
 	text-transform: none;
@@ -1472,7 +1472,7 @@ ul.products li.product .button {
 }
 
 .star-rating span:before {
-	color: #c9544b;
+	color: #eaa553;
 	content: "\53\53\53\53\53";
 	left: 0;
 	position: absolute;
@@ -1513,13 +1513,13 @@ p.stars a:hover~a:before {
 
 p.stars:hover a:before {
 	content: "\53";
-	color: #c9544b;
+	color: #eaa553;
 	opacity: 1;
 }
 
 p.stars.selected a.active:before {
 	content: "\53";
-	color: #c9544b;
+	color: #eaa553;
 	opacity: 1;
 }
 
@@ -1531,7 +1531,7 @@ p.stars.selected a.active~a:before {
 
 p.stars.selected a:not(.active):before {
 	content: "\53";
-	color: #c9544b;
+	color: #eaa553;
 	opacity: 1;
 }
 
@@ -1571,7 +1571,7 @@ p.stars.selected a:not(.active):before {
 }
 
 .woocommerce-tabs ul.tabs li.active {
-	border-bottom-color: #242d36;
+	border-bottom-color: #429ca5;
 	border-bottom-width: 1px;
 	margin-bottom: -1px;
 }
@@ -1590,12 +1590,12 @@ p.stars.selected a:not(.active):before {
 
 .woocommerce-tabs ul.tabs li:hover a {
 	color: #fff;
-	background: #242d36;
+	background: #429ca5;
 }
 
 .woocommerce-tabs ul.tabs li.active a {
 	color: #fff;
-	background: #242d36;
+	background: #429ca5;
 }
 
 .woocommerce-tabs ul.tabs li.active:hover a {
@@ -1640,7 +1640,7 @@ p.stars.selected a:not(.active):before {
 }
 
 .required {
-	color: #c9544b;
+	color: #eaa553;
 }
 
 .quantity .qty
@@ -1716,7 +1716,7 @@ ul.woocommerce-error li {
 	right: 0;
 	margin: 0;
 	padding: 1em;
-	background-color: #c9544b;
+	background-color: #eaa553;
 	color: #fff;
 	z-index: 9999;
 }
@@ -1815,7 +1815,7 @@ a.added_to_cart {
 {
 	font-weight: bold;
 	float: left;
-	color: #c9544b;
+	color: #eaa553;
 	margin-right: .4em;
 }
 
@@ -1911,7 +1911,7 @@ a.added_to_cart {
 }
 
 .widget_price_filter .ui-slider .ui-slider-handle {
-	background: #c9544b;
+	background: #eaa553;
 	box-sizing: border-box;
 	cursor: ew-resize;
 	height: 1em;
@@ -1933,7 +1933,7 @@ a.added_to_cart {
 }
 
 .widget_price_filter .ui-slider .ui-slider-range {
-	background: #c9544b;
+	background: #eaa553;
 	border: 0;
 	display: block;
 	position: absolute;
