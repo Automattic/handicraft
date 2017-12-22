@@ -41,16 +41,8 @@
 			<?php
 			endif; ?>
 
-			<?php if ( has_nav_menu( 'jetpack-social-menu' ) || class_exists( 'WooCommerce' ) ) : ?>
-				<div class="social-wrapper">
-					<?php handicraft_social_menu(); ?>
-
-					<?php // Add Woocommerce Cart to header if Woocommerce exists
-						if ( class_exists( 'WooCommerce' ) ) {
-							handicraft_woocommerce_header_cart();
-						}
-					?>
-				</div>
+			<?php if ( has_nav_menu( 'jetpack-social-menu' ) ) : ?>
+				<?php handicraft_social_menu(); ?>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
@@ -60,7 +52,13 @@
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
+					'fallback_cb'    => false,
 				) );
+			?>
+			<?php // Add Woocommerce Cart to header if Woocommerce exists
+				if ( class_exists( 'WooCommerce' ) ) {
+					handicraft_woocommerce_header_cart();
+				}
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
