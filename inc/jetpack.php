@@ -29,7 +29,7 @@ function handicraft_jetpack_setup() {
 	// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
 		'blog-display'   => 'content',
-		'author-bio'     => false,
+		'author-bio'     => true,
 		'avatar-default' => false,
 		'post-details'   => array(
 			'stylesheet' => 'handicraft-style',

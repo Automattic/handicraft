@@ -491,7 +491,6 @@ ul.products li.product .button {
 	border-radius: 100%;
 	display: block;
 	height: 80px;
-	font-family: Futura, "Century Gothic", AppleGothic, sans-serif;
 	font-weight: 700;
 	line-height: calc(80px - .6em);
 	left: 33%;
@@ -759,7 +758,6 @@ ul.products li.product .button {
 }
 
 .single-product div.product .comment-reply-title {
-	font-family: "Droid Serif", Merriweather, Lora, Garamond, "Hoefler Text", Times New Roman, Times, serif;
 	font-weight: 700;
 }
 
@@ -1039,7 +1037,6 @@ ul.products li.product .button {
 /* !My Account Navigation */
 
 .woocommerce-MyAccount-navigation {
-	font-family: Futura, "Century Gothic", AppleGothic, sans-serif;
 	clear: both;
 	display: table;
 	margin: 0 auto 3.2em;
@@ -1145,7 +1142,6 @@ ul.products li.product .button {
 
 .woocommerce-MyAccount-content address {
 	font-style: normal;
-	font-family: "Droid Serif", Merriweather, Lora, Garamond, "Hoefler Text", Times New Roman, Times, serif;
 }
 
 .woocommerce-MyAccount-content fieldset {
@@ -1182,7 +1178,6 @@ ul.products li.product .button {
 
 .woocommerce-pagination .page-numbers li {
 	display: inline-block;
-	font-family: Futura, "Century Gothic", AppleGothic, sans-serif;
 	font-size: 16px;
 	font-weight: 700;
 }
@@ -1201,20 +1196,23 @@ ul.products li.product .button {
 
 .site-header-cart {
 	flex: 0 1 auto;
-	margin: 0 0 18px;
+	margin: 0;
 	padding: 0;
 	text-align: center;
 }
 
 .site-header-cart .cart-contents {
-	color: white;
-	font-family: Futura, "Century Gothic", AppleGothic, sans-serif;
-	font-size: 14px;
+	padding: .4em .6em;
 	font-weight: 700;
-	margin: -.4em .8em -.4em 0;
-	padding: .4em .8em;
 	text-decoration: none;
 	text-transform: uppercase;
+}
+
+.site-header-cart > li:first-of-type:before {
+	color: #429ca5;
+	content: "|";
+	display: inline-block;
+	margin-left: .2em;
 }
 
 .site-header-cart .widget_shopping_cart {
@@ -1274,9 +1272,7 @@ ul.products li.product .button {
 }
 
 .site-header-cart li.is-active a {
-	background: #429ca5;
 	border-radius: 3px;
-	color: #fff;
 }
 
 .site-header-cart .cart-contents .icon {
@@ -1359,10 +1355,8 @@ ul.products li.product .button {
 
 @media screen and (min-width: 768px) {
 	.site-header-cart {
-		flex: 0 0 auto;
 		margin-bottom: 0;
 		position: inherit;
-		text-align: right;
 		top: inherit;
 	}
 	.site-header-cart>li:last-of-type {}
@@ -1579,7 +1573,6 @@ p.stars.selected a:not(.active):before {
 .woocommerce-tabs ul.tabs li a {
 	display: block;
 	color: #252e36;
-	font-family: Futura, "Century Gothic", AppleGothic, sans-serif;
 	padding: .8em;
 	font-size: 14px;
 	font-weight: 700;
@@ -1640,7 +1633,7 @@ p.stars.selected a:not(.active):before {
 }
 
 .required {
-	color: #eaa553;
+	color: #e06e53;
 }
 
 .quantity .qty

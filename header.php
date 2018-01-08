@@ -48,18 +48,20 @@
 
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'handicraft' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-					'fallback_cb'    => false,
-				) );
-			?>
-			<?php // Add Woocommerce Cart to header if Woocommerce exists
-				if ( class_exists( 'WooCommerce' ) ) {
-					handicraft_woocommerce_header_cart();
-				}
-			?>
+			<div class="cart-wrapper">
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+						'fallback_cb'    => false,
+					) );
+				?>
+				<?php // Add Woocommerce Cart to header if Woocommerce exists
+					if ( class_exists( 'WooCommerce' ) ) {
+						handicraft_woocommerce_header_cart();
+					}
+				?>
+			</div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
