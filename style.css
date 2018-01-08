@@ -321,7 +321,7 @@ dfn, cite, em, i {
 blockquote {
 	margin: 0 1.6em;
 	font-style: italic;
-	font-size: 24px;
+	font-size: 18px;
 }
 
 address {
@@ -865,7 +865,7 @@ a:hover, a:active {
 	color: white;
 	width: 100vw;
 	position: relative;
-	margin-top: 1.6em;
+	margin-top: 3.2em;
 	margin-left: -50vw;
 	left: 50%;
 	display: flex;
@@ -1590,7 +1590,7 @@ p.has-drop-cap:first-letter {
 /* Blockquotes*/
 .wp-block-quote {
 	font-style: italic;
-	font-size: 24px;
+	font-size: 18px;
 }
 .wp-block-quote p:last-of-type {
 	margin-bottom: .4em;
@@ -1857,7 +1857,9 @@ p.has-drop-cap:first-letter {
 		font-size: 36px;
 	}
 
-	h3 {
+	h3,
+	blockquote,
+	.wp-block-quote {
 		font-size: 24px;
 	}
 
@@ -2007,6 +2009,29 @@ p.has-drop-cap:first-letter {
 
 	.main-navigation li.current-menu-item ~ li.current-menu-item > a {
 		opacity: 1;
+	}
+
+	.hentry:after {
+		background-size: 550px auto;
+		width: 550px;
+		height: 50px;
+	}
+
+	.site-content .hentry:nth-child(2n):after {
+		background-position: 0 -53px;
+		height: 62px;
+	}
+
+	.site-content .hentry:nth-child(3n):after {
+		background-position: center bottom;
+		height: 58px;
+	}
+
+	.site-content .hentry:nth-child(4n):after {
+		background-size: 400px auto;
+		background-position: right -80px;
+		border-bottom: 2px dashed #aaa;
+		height: 50px;
 	}
 }
 
