@@ -683,6 +683,7 @@ a:hover, a:active {
 .site-main .posts-navigation a,
 .site-main .post-navigation a {
 	color: #e06e53;
+	opacity: 1;
 	transition: 0.3s opacity;
 }
 
@@ -699,18 +700,23 @@ a:hover, a:active {
 }
 
 .comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
+.posts-navigation .nav-previous {
 	float: left;
 	width: 50%;
 }
 
 .comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
+.posts-navigation .nav-next {
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+
+.post-navigation .nav-next {
+	border-top: 1px dotted #999;
+	margin-top: .8em;
+	padding-top: .8em;
+	text-align: right;
 }
 
 .post-navigation {
@@ -999,6 +1005,12 @@ body:after {
 	border-radius: 50%;
 	line-height: 1;
 	padding: .1em;
+	transition: 0.3s opacity;
+}
+.jetpack-social-navigation li a:hover .icon,
+.jetpack-social-navigation li a:focus .icon,
+.jetpack-social-navigation li a:active .icon {
+	opacity: 0.5;
 }
 .sticky {
 	display: block;
@@ -2032,6 +2044,20 @@ p.has-drop-cap:first-letter {
 		background-position: right -80px;
 		border-bottom: 2px dashed #aaa;
 		height: 50px;
+	}
+
+	.post-navigation .nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.post-navigation .nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+		border-top: 0;
+		margin-top: 0;
+		padding-top: 0;
 	}
 }
 
