@@ -1,0 +1,234 @@
+/*--------------------------------------------------------------
+## Gutenberg Styles
+--------------------------------------------------------------*/
+
+.aligncenter img {
+	display: block;
+	margin: 0 auto;
+}
+
+/* Dropcaps */
+p.has-drop-cap:first-letter {
+	font-family: "Zilla Slab", "Merriweather", Georgia, "Times New Roman", serif;
+	font-size: 4.8em;
+	margin-right: .1em;
+}
+
+/* Images */
+.wp-block-image {
+	margin-bottom: 1.6em;
+}
+.wp-block-image figcaption {
+	font-style: italic;
+	font-size: 14px;
+	margin: .8em auto;
+}
+
+/* Galleries */
+.wp-block-gallery {}
+.columns-1 {}
+.columns-2 {}
+.columns-3 {}
+.columns-4 {}
+.columns-5 {}
+
+/* Blockquotes*/
+.wp-block-quote {
+	font-style: italic;
+	font-size: 18px;
+}
+.wp-block-quote p:last-of-type {
+	margin-bottom: .4em;
+}
+.wp-block-quote cite {
+	display: block;
+	font-size: 16px;
+	margin-bottom: 1.6em;
+	text-align: right;
+	width: 100%;
+}
+.blocks-quote-style-1 {}
+.blocks-quote-style-2 {}
+
+/* Cover Images */
+.wp-block-cover-image {
+	margin: 0 0 1.6em;
+}
+.has-background-dim {}
+.has-parallax {}
+
+/* Video */
+.wp-block-video {
+	margin: 0 0 1.6em;
+}
+.wp-block-video video {
+	display: block;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+/* Audio */
+.wp-block-audio {}
+
+/* Pullquotes */
+.wp-block-pullquote {
+	border-top: 2px dashed currentColor;
+	border-bottom: 2px dashed currentColor;
+	color: #4cb0c1;
+	font-family: "Zilla Slab", "Merriweather", Georgia, "Times New Roman", serif;
+	margin-bottom: 1.6em;
+	padding: 1.6em .8em;
+}
+.wp-block-pullquote > p {
+	font-size: 36px;
+	font-style: normal;
+	font-family: "Zilla Slab", "Merriweather", Georgia, "Times New Roman", serif;
+	margin: 0 0 .8em;
+	line-height: 1.1;
+}
+.wp-block-pullquote > cite {
+	font-family: "Merriweather Sans", Helvetica, Arial, sans-serif;
+	font-style: normal;
+	line-height: 1.6;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+.wp-block-pullquote.alignleft > p,
+.wp-block-pullquote.alignright > p {
+	font-size: 24px;
+	line-height: 1.4;
+}
+
+/* Tables */
+.wp-block-table {
+	display: table;
+}
+.wp-block-table.alignleft,
+.wp-block-table.alignright {
+	max-width: 50%;
+}
+
+/* Preformatted */
+.wp-block-preformatted {}
+
+/* Code */
+.wp-block-code {}
+
+/* Verse */
+.wp-block-verse {
+	border: 0;
+	font-family: inherit;
+	padding: 0;
+}
+
+.wp-block-verse.aligncenter {
+	text-align: center;
+}
+
+.wp-block-verse.alignright {
+	text-align: right;
+}
+
+/* Separator */
+.wp-block-separator {
+	border-bottom: 2px dashed #e06e53;
+	margin-bottom: 1.6em;
+	width: 66%;
+	max-width: 66%;
+}
+
+.wp-block-separator.alignwide {
+	width: 75vw;
+	max-width: 75vw;
+}
+
+.wp-block-separator.alignfull {
+	width: 96vw;
+	max-width: 96vw;
+}
+
+/* Buttons */
+.wp-block-button {
+	background-color: #e06e53;
+	margin-bottom: 1.6em;
+	border-radius: 3px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-size: 14px;
+}
+.wp-block-button.aligncenter {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.wp-block-button a {
+	transition: 0.3s color;
+}
+
+.wp-block-button a:hover,
+.wp-block-button a:focus,
+.wp-block-button a:active {
+	color: rgba(255,255,255,0.5);
+}
+
+/* Text Columns */
+.wp-block-text-columns {}
+.wp-block-column {}
+
+/* Latest Posts */
+.wp-block-latest-posts {}
+.wp-block-latest-posts__post-date {
+	color: #888;
+}
+.is-grid {}
+
+@media (min-width: 768px) {
+	.alignfull {
+		clear: both;
+		left: 50%;
+		transform: translateX(-50%);
+		position: relative;
+		width: 96vw;
+		max-width: 96vw;
+		overflow-x: hidden;
+		margin: 0 0 1.6em;
+	}
+
+	.wp-block-cover-image {
+		left: 50%;
+		margin-left: -50vw;
+		width: 100vw;
+		position: relative;
+		overflow-x: hidden;
+		max-width: 100vw;
+	}
+
+	.alignfull .jetpack-video-wrapper iframe,
+	.alignwide .jetpack-video-wrapper iframe {
+		margin-left: auto !important; /* to override inline styles */
+		margin-right: auto !important;
+	}
+
+	.alignwide {
+		left: 50%;
+		margin-left: -37.5vw;
+		clear: both;
+		position: relative;
+		width: 75vw;
+		max-width: 75vw;
+	}
+
+	.alignwide img,
+	.alignfull img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.wp-block-quote {
+		font-size: 24px;
+	}
+}

@@ -63,7 +63,7 @@ if ( ! function_exists( 'handicraft_setup' ) ) :
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'handicraft_custom_background_args', array(
 			'default-color' => 'ffffff',
-			'default-image' => get_template_directory_uri() . '/images/papertexture.jpg',
+			'default-image' => get_template_directory_uri() . '/assets/images/papertexture.jpg',
 		) ) );
 
 		// Add theme support for selective refresh for widgets.
@@ -125,11 +125,52 @@ function handicraft_widgets_init() {
 }
 add_action( 'widgets_init', 'handicraft_widgets_init' );
 
+
+/**
+ * Register Google Fonts
+ */
+function handicraft_fonts_url() {
+	$fonts_url = '';
+
+	/* Translators: If there are characters in your language that are not
+	 * supported by Zilla Slab, translate this to 'off'. Do not translate
+	 * into your own language.
+	 */
+	$zilla = esc_html_x( 'on', 'Zilla Slab font: on or off', 'handicraft' );
+	
+	if ( 'off' !== $zilla ) {
+		$font_families = array();
+		$font_families[] = 'Zilla Slab:400,700';
+		
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+	
+		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+	}
+	
+	return $fonts_url;
+
+}
+
+/** 
+ * Gutenberg Editor Styles 
+ */
+
+function handicraft_editor_styles() {
+	wp_enqueue_style( 'handicraft-editor-style', get_template_directory_uri() . '/assets/stylesheets/editor-style.css');
+	wp_enqueue_style( 'handicraft-zilla-slab', handicraft_fonts_url(), array(), null );
+}
+add_action( 'enqueue_block_editor_assets', 'handicraft_editor_styles' );
+
 /**
  * Enqueue scripts and styles.
  */
 function handicraft_scripts() {
 	wp_enqueue_style( 'handicraft-style', get_stylesheet_uri() );
+
+	wp_enqueue_style( 'handicraft-block-style', get_template_directory_uri() . '/assets/stylesheets/blocks.css' );
 
 	wp_enqueue_script( 'handicraft-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -176,41 +217,3 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
-
-/**
- * Register Google Fonts
- */
-function handicraft_fonts_url() {
-    $fonts_url = '';
-    
-    /* Translators: If there are characters in your language that are not
-	 * supported by Zilla Slab, translate this to 'off'. Do not translate
-	 * into your own language.
-	 */
-	$zilla = esc_html_x( 'on', 'Zilla Slab font: on or off', 'handicraft' );
-	
-	if ( 'off' !== $zilla ) {
-		$font_families = array();
-		$font_families[] = 'Zilla Slab:400,700';
-		
-		$query_args = array(
-			'family' => urlencode( implode( '|', $font_families ) ),
-			'subset' => urlencode( 'latin,latin-ext' ),
-		);
-	
-		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
-	}
-	
-	return $fonts_url;
-
-}
-
-/** 
- * Gutenberg Editor Styles 
- */
-
-function handicraft_editor_styles() {
-	wp_enqueue_style( 'handicraft-editor-styles', get_template_directory_uri() . '/blocks.css');
-	wp_enqueue_style( 'handicraft-zilla-slab', handicraft_fonts_url(), array(), null );
-}
-add_action( 'enqueue_block_editor_assets', 'handicraft_editor_styles' );
