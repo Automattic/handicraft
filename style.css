@@ -874,8 +874,6 @@ a:hover, a:active {
 	margin-top: 3.2em;
 	margin-left: -50vw;
 	left: 50%;
-	display: flex;
-	justify-content: space-between;
 }
 
 .widget-area:before {
@@ -1833,10 +1831,6 @@ object {
 		margin-top: 0;
 		padding-top: 0;
 	}
-
-	.widget {
-		width: 30%;
-	}
 }
 
 @media screen and ( min-width: 900px ) {
@@ -1844,5 +1838,14 @@ object {
 	.site-branding {
 		width: 75%;
 		padding: 1.6em 3.2em;
+	}
+
+	.widget-area {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.widget {
+		width: 30%;
 	}
 }
