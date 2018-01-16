@@ -1019,27 +1019,27 @@ body:after {
 	background-image: url(assets/images/handicraftdividers.png);
 	background-repeat: no-repeat;
 	background-position: 0 0;
-	background-size: 300px auto;
-	width: 300px;
-	height: 30px;
+	background-size: cover;
+	width: 100%;
+	height: 0;
+	padding-top: 9.5%;
 	margin: 2.4em auto 0;
 }
 
 .site-content .hentry:nth-child(2n):after {
-	background-position: 0 -28px;
-	height: 31px;
+	background-position: 0 26%;
+	padding-top: 10.333%;
 }
 
 .site-content .hentry:nth-child(3n):after {
 	background-position: center bottom;
-	height: 31px;
+	padding-top: 10.333%;
 }
 
 .site-content .hentry:nth-child(4n):after {
-	background-size: 300px auto;
-	background-position: right -60px;
+	background-position: right 56%;
 	border-bottom: 1px dashed #aaa;
-	height: 35px;
+	padding-top: 11.6666%;
 }
 
 .entry-author {
@@ -1613,6 +1613,30 @@ object {
 	}
 }
 
+@media screen and (min-width: 615px) {
+	.hentry:after {
+		background-size: 550px auto;
+		width: 550px;
+		height: 50px;
+		padding: 0;
+	}
+	.site-content .hentry:nth-child(2n):after {
+		background-position: 0 -53px;
+		height: 56px;
+		padding: 0;
+	}
+	.site-content .hentry:nth-child(3n):after {
+		background-position: center bottom;
+		height: 50px;
+		padding: 0;
+	}
+	.site-content .hentry:nth-child(4n):after {
+		background-size: 400px auto;
+		background-position: right -80px;
+		border-width: 2px;
+		height: 50px;
+	}
+}
 @media screen and (min-width: 768px) {
 
 	body {
@@ -1795,25 +1819,6 @@ object {
 	}
 	.hentry {
 		margin-bottom: 3.2em;
-	}
-	.hentry:after {
-		background-size: 550px auto;
-		width: 550px;
-		height: 50px;
-	}
-	.site-content .hentry:nth-child(2n):after {
-		background-position: 0 -53px;
-		height: 62px;
-	}
-	.site-content .hentry:nth-child(3n):after {
-		background-position: center bottom;
-		height: 58px;
-	}
-	.site-content .hentry:nth-child(4n):after {
-		background-size: 400px auto;
-		background-position: right -80px;
-		border-bottom: 2px dashed #aaa;
-		height: 50px;
 	}
 	.post-navigation .nav-previous {
 		float: left;
