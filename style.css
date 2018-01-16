@@ -1159,7 +1159,6 @@ body:after {
 	clear: both;
 	margin: 0 0 1.6em;
 }
-
 .site-info {
 	color: #999;
 	font-size: 14px;
@@ -1169,12 +1168,15 @@ body:after {
 	letter-spacing: 1px;
 	margin: 1.6em auto;
 }
-
 .site-info a {
 	color: #999;
 }
-
 .site-info .sep {
+	display: block;
+	clear: both;
+	height: 0;
+	width: 100%;
+	visibility: hidden;
 	margin: 0 .4em;
 }
 
@@ -1684,6 +1686,7 @@ object {
 	.site-branding {
 		max-width: 850px;
 		display: grid;
+		display: -ms-grid;
 		text-align: left;
 	}
 	.site-title {
@@ -1839,6 +1842,14 @@ object {
 	.post-thumbnail {
 		border-width: 2px;
 		padding: .8em;
+	}
+
+	.site-info .sep {
+		display: inline;
+		clear: none;
+		height: auto;
+		width: auto;
+		visibility: visible;
 	}
 }
 
