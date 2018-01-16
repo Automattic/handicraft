@@ -943,7 +943,7 @@ body:after {
 }
 .site-title {
 	margin: 0;
-	font-size: 36px;
+	font-size: 42px;
 }
 .site-title a,
 .site-title a:visited {
@@ -951,6 +951,7 @@ body:after {
 }
 .site-description {
 	clear: both;
+	display: block;
 	background: #eaa553;
 	color: white;
 	font-size: 14px;
@@ -985,7 +986,7 @@ body:after {
 }
 .jetpack-social-navigation {
 	clear: both;
-	display: inline-block;
+	display: block;
 	font-size: 36px;
 }
 .jetpack-social-navigation ul {
@@ -1682,30 +1683,33 @@ object {
 	}
 	.site-branding {
 		max-width: 850px;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
+		display: grid;
 		text-align: left;
 	}
 	.site-title {
 		margin: 0;
+		grid-column-start: 1;
+		grid-column-end: 2;
 		display: inline-block;
-		width: 66%;
-		align-self: flex-start;
-		order: 1;
 	}
 	.site-description {
+		grid-column-start: 1;
+		grid-column-end: 2;
+		grid-row-start: 1;
+		grid-row-start: 2;
 		margin: 0 0 0 14px;
 		position: relative;
-		max-width: 66%;
-		order: 3;
+		max-width: 100%;
+		justify-self: start;
 	}
 	.jetpack-social-navigation {
 		display: inline-block;
-		font-size: 48px;
+		font-size: 42px;
 		text-align: right;
-		width: 30%;
-		order: 2;
+		grid-column-start: 3;
+		grid-row-start: 1;
+		line-height: 1;
+		align-self: center;
 	}
 	.menu-toggle {
 		display: none;
