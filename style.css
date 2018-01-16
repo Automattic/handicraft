@@ -1143,12 +1143,12 @@ body:after {
 	content: "";
 	display: block;
 	position: absolute;
-	right: -75px;
+	right: -52px;
 	bottom: 50px;
-	background-size: 200px auto;
-	background-position: right -15px;
-	width: 100px;
-	height: 50px;
+	background-size: 300px auto;
+	background-position: right -62px;
+	width: 80px;
+	height: 40px;
 	transform: rotate(90deg);
 	z-index: -1;
 }
@@ -1575,16 +1575,24 @@ object {
 	.main-navigation {
 		height: auto;
 	}
-
 	.menu-toggle {
 		display: block;
 		margin: 1.6em auto;
 	}
-
+	.menu-toggle:before {
+		content: "\2630";
+		font-family: Helvetica, Arial, sans-serif;
+		margin-right: 3px;
+		font-size: 16px;
+		font-weight: normal;
+		display: inline-block;
+		vertical-align: baseline;
+		position: relative;
+		top: -1px;
+	}
 	.menu-toggle:focus {
 		outline: thin solid;
 	}
-
 	.main-navigation > div div {
 		height: auto;
 		left: 0;
@@ -1597,7 +1605,6 @@ object {
 		-moz-transition: max-height all 0.425s ease-in-out;
 		transition: max-height all 0.425s ease-in-out;
 	}
-
 	.main-navigation.toggled > div div {
 		max-height: 300vh;
 		width: 100%;
