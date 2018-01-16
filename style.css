@@ -284,14 +284,17 @@ h1, h2, h3, h4, h5, h6,
 	clear: both;
 	font-family: "Zilla Slab", "Merriweather", Georgia, "Times New Roman", serif;
 	font-weight: bold;
+	margin: 0 0 .8em;
 }
 
 h1 {
 	font-size: 36px;
+	margin-bottom: 0;
 }
 
 h2 {
 	font-size: 24px;
+	margin-bottom: 0;
 }
 
 h3 {
@@ -901,12 +904,12 @@ body:after {
 	display: block;
 	clear: both;
 	width: 100%;
-	height: 126px;
-	margin: .8em 0 0;
+	height: 66px;
+	margin: .2em 0 0;
 	background-repeat: repeat-x;
 	background-image: url('assets/images/handicraftheader.png');
-	background-size: 1000px auto;
-	background-position: -500px 0;
+	background-size: 500px auto;
+	background-position: -250px 0;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -917,13 +920,13 @@ body.admin-bar:before {
 body:after {
 	position: relative;
 	top: auto;
-	bottom: 8px;
+	bottom: 2px;
 }
 .site {
 	overflow-x: hidden;
 }
 .site-header {
-	padding-top: 8em;
+	padding-top: 4.6em;
 }
 .site-content {
 	padding: 1.6em 0;
@@ -936,23 +939,18 @@ body:after {
 	margin: 0 auto 1.6em;
 	width: 92%;
 	max-width: 850px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	text-align: center;
 }
 .site-title {
 	margin: 0;
 	font-size: 36px;
-	display: inline-block;
-	width: 66%;
-	align-self: flex-start;
-	order: 1;
 }
 .site-title a,
 .site-title a:visited {
 	color: #429ca5;
 }
 .site-description {
+	clear: both;
 	background: #eaa553;
 	color: white;
 	font-size: 14px;
@@ -964,8 +962,6 @@ body:after {
 	position: relative;
 	height: 28px;
 	letter-spacing: 1px;
-	max-width: 66%;
-	order: 3;
 }
 .site-description:before,
 .site-description:after {
@@ -988,11 +984,9 @@ body:after {
 	right: -14px;
 }
 .jetpack-social-navigation {
+	clear: both;
 	display: inline-block;
 	font-size: 36px;
-	text-align: right;
-	width: 30%;
-	order: 2;
 }
 .jetpack-social-navigation ul {
 	margin-bottom: 0 !important;
@@ -1015,7 +1009,7 @@ body:after {
 }
 
 .hentry {
-	margin: 0 0 3.2em;
+	margin: 0 0 2.4em;
 }
 
 .hentry:after {
@@ -1025,27 +1019,27 @@ body:after {
 	background-image: url(assets/images/handicraftdividers.png);
 	background-repeat: no-repeat;
 	background-position: 0 0;
-	background-size: 550px auto;
-	width: 550px;
-	height: 50px;
-	margin: 3.2em auto 0;
+	background-size: 300px auto;
+	width: 300px;
+	height: 30px;
+	margin: 2.4em auto 0;
 }
 
 .site-content .hentry:nth-child(2n):after {
-	background-position: 0 -53px;
-	height: 62px;
+	background-position: 0 -28px;
+	height: 31px;
 }
 
 .site-content .hentry:nth-child(3n):after {
 	background-position: center bottom;
-	height: 58px;
+	height: 31px;
 }
 
 .site-content .hentry:nth-child(4n):after {
-	background-size: 400px auto;
-	background-position: right -80px;
-	border-bottom: 2px dashed #aaa;
-	height: 50px;
+	background-size: 300px auto;
+	background-position: right -60px;
+	border-bottom: 1px dashed #aaa;
+	height: 35px;
 }
 
 .entry-author {
@@ -1079,9 +1073,9 @@ body:after {
 
 .entry-title {
 	color: #eaa553;
-	font-size: 42px;
+	font-size: 36px;
 	margin: 0 0 .4em;
-	line-height: 1.2;
+	line-height: 1.1;
 }
 
 .entry-title a {
@@ -1137,11 +1131,11 @@ body:after {
 	color: #429ca5;
 }
 .post-thumbnail {
-	border: 2px dashed #9dbc71;
+	border: 1px dashed #9dbc71;
 	display: block;
 	margin: 0 auto 1.6em;
 	position: relative;
-	padding: .8em;
+	padding: .2em;
 }
 .post-thumbnail:after {
 	background-image: url('assets/images/handicraftdividers.png');
@@ -1150,8 +1144,8 @@ body:after {
 	position: absolute;
 	right: -75px;
 	bottom: 50px;
-	background-size: 400px auto;
-	background-position: right -80px;
+	background-size: 200px auto;
+	background-position: right -15px;
 	width: 100px;
 	height: 50px;
 	transform: rotate(90deg);
@@ -1606,16 +1600,13 @@ object {
 		width: 100%;
 		z-index: 999;
 	}
-
 	.main-navigation ul {
 		display: inherit;
 	}
-
 	.main-navigation ul a {
 		display: block;
 		padding: .8em 4%;
 	}
-
 	.main-navigation .sub-menu {
 		border-top: 0;
 		padding: 0 0 0 1.6em;
@@ -1627,75 +1618,101 @@ object {
 	body {
 		font-size: 18px;
 	}
-
+	body:before,
+	body:after {
+		height: 126px;
+		background-size: 1000px auto;
+		background-position: -500px 0;
+	}
+	body:after {
+		bottom: 8px;
+	}
 	.site-title {
 		font-size: 64px;
 		line-height: 1.1;
 		margin-bottom: .1em;
 	}
-
-	h1 {
+	h1,
+	.entry-title {
 		font-size: 42px;
+		line-height: 1.2;
 	}
-
 	h2 {
 		font-size: 36px;
 	}
-
 	h3,
 	blockquote {
 		font-size: 24px;
 	}
-
 	h4 {
 		font-size: 18px;
 	}
-
 	h5 {
 		font-size: 16px;
 	}
-
 	h6 {
 		font-size: 14px;
 	}
-
+	.site-header {
+		padding-top: 8em;
+	}
+	.site-branding {
+		max-width: 850px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		text-align: left;
+	}
+	.site-title {
+		margin: 0;
+		display: inline-block;
+		width: 66%;
+		align-self: flex-start;
+		order: 1;
+	}
+	.site-description {
+		margin: 0 0 0 14px;
+		position: relative;
+		max-width: 66%;
+		order: 3;
+	}
+	.jetpack-social-navigation {
+		display: inline-block;
+		font-size: 48px;
+		text-align: right;
+		width: 30%;
+		order: 2;
+	}
 	.menu-toggle {
 		display: none;
 	}
-
 	.main-navigation {
 		margin: 0 auto;
 		font-size: 16px;
 		text-align: center;
 	}
-
 	.main-navigation .cart-wrapper {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
-
 	.main-navigation .cart-wrapper div > * {
 		flex: 1 100%;
 	}
-
 	.main-navigation .cart-wrapper div > ul {
 		flex: 1.5 0px;
 	}
-
 	.main-navigation .cart-wrapper:before,
 	.main-navigation .cart-wrapper:after {
 		content: "";
 		border-bottom: 2px dashed #429ca5;
 		flex: 1 auto;
 	}
-
 	.main-navigation a:hover,
 	.main-navigation a:focus,
 	.main-navigation a:active {
 		opacity: 1;
 	}
-
 	.main-navigation .dropdown:before {
 		display: inline-block;
 		content: "\25BC";
@@ -1706,35 +1723,28 @@ object {
 		position: relative;
 		top: -2px;
 	}
-
 	.main-navigation ul {
 		display: block;
 	}
-
 	.main-navigation div div > ul {
 		width: 100%;
 	}
-
 	.main-navigation li {
 		display: inline-block;
 	}
-
 	.main-navigation div div li:after {
 		color: #429ca5;
 		content: "|";
 		display: inline-block;
 		margin-left: .2em;
 	}
-
 	.main-navigation div div li:last-of-type:after {
 		display: none;
 	}
-
 	.main-navigation ul li:hover > ul ul,
 	.main-navigation ul li.focus > ul ul {
 		top: 0;
 	}
-
 	.main-navigation ul ul {
 		background: #429ca5;
 		position: absolute;
@@ -1744,7 +1754,6 @@ object {
 		width: 220px;
 		text-align: left;
 	}
-
 	.main-navigation ul ul ul {
 		border-radius: 0;
 		background: transparent;
@@ -1752,77 +1761,64 @@ object {
 		top: auto;
 		left: auto;
 	}
-
 	.main-navigation ul ul li {
 		border-top: 1px dashed rgba(255,255,255,0.25);
 	}
-
 	.main-navigation ul ul:first-of-type li:first-of-type {
 		border-top: 0;
 	}
-
 	.main-navigation ul ul ul:first-of-type li:first-of-type {
 		border-top: 1px dashed rgba(255,255,255,0.25);
 	}
-
 	.main-navigation ul ul li:after {
 		display: none;
 	}
-
 	.main-navigation ul ul a {
 		color: white;
 		font-size: 14px;
 		padding: .6em 1.2em;
 	}
-
 	.main-navigation ul ul .dropdown {
 		display: none;
 	}
-
 	.main-navigation ul ul ul a {
 		padding-left: 2.4em;
 	}
-
 	.main-navigation ul ul ul ul a {
 		padding-left: 3.2em;
 	}
-
 	.main-navigation ul ul ul ul ul a {
 		padding-left: 4.8em;
 	}
-
 	.main-navigation li.current-menu-item ~ li.current-menu-item > a {
 		opacity: 1;
 	}
-
+	.hentry {
+		margin-bottom: 3.2em;
+	}
 	.hentry:after {
 		background-size: 550px auto;
 		width: 550px;
 		height: 50px;
 	}
-
 	.site-content .hentry:nth-child(2n):after {
 		background-position: 0 -53px;
 		height: 62px;
 	}
-
 	.site-content .hentry:nth-child(3n):after {
 		background-position: center bottom;
 		height: 58px;
 	}
-
 	.site-content .hentry:nth-child(4n):after {
 		background-size: 400px auto;
 		background-position: right -80px;
 		border-bottom: 2px dashed #aaa;
 		height: 50px;
 	}
-
 	.post-navigation .nav-previous {
 		float: left;
 		width: 50%;
 	}
-
 	.post-navigation .nav-next {
 		float: right;
 		text-align: right;
@@ -1830,6 +1826,10 @@ object {
 		border-top: 0;
 		margin-top: 0;
 		padding-top: 0;
+	}
+	.post-thumbnail {
+		border-width: 2px;
+		padding: .8em;
 	}
 }
 
@@ -1839,12 +1839,10 @@ object {
 		width: 75%;
 		padding: 1.6em 3.2em;
 	}
-
 	.widget-area {
 		display: flex;
 		justify-content: space-between;
 	}
-
 	.widget {
 		width: 30%;
 	}

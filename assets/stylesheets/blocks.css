@@ -101,6 +101,11 @@ p.has-drop-cap:first-letter {
 	line-height: 1.4;
 }
 
+/* Categories */
+
+.wp-block-categories-list {
+}
+
 /* Tables */
 .wp-block-table {
 	display: table;
