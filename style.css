@@ -904,12 +904,12 @@ body:after {
 	display: block;
 	clear: both;
 	width: 100%;
-	height: 66px;
+	height: 90px;
 	margin: .2em 0 0;
 	background-repeat: repeat-x;
 	background-image: url('assets/images/handicraftheader.png');
-	background-size: 500px auto;
-	background-position: -250px 0;
+	background-size: 700px auto;
+	background-position: -300px 0;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -926,7 +926,7 @@ body:after {
 	overflow-x: hidden;
 }
 .site-header {
-	padding-top: 4.6em;
+	padding-top: 6.4em;
 }
 .site-content {
 	padding: 1.6em 0;
