@@ -56,5 +56,3 @@
 	</footer><!-- .entry-footer -->
 
 </article><!-- #post-<?php the_ID(); ?> -->
-
-<?php handicraft_author_bio(); ?>

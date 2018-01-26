@@ -17,9 +17,11 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', get_post_type() );
 
+			handicraft_author_bio();
+
 			the_post_navigation( array(
-				'next_text' => wp_kses( __( '<span class="meta-nav">Next</span> %title', 'small-business' ), array( 'span' => array( 'class' => array() ) ) ),
-				'prev_text' => wp_kses( __( '<span class="meta-nav">Previous</span> %title', 'small-business' ), array( 'span' => array( 'class' => array() ) ) )
+				'next_text' => wp_kses( __( '<span class="meta-nav">Next</span> %title', 'handicraft' ), array( 'span' => array( 'class' => array() ) ) ),
+				'prev_text' => wp_kses( __( '<span class="meta-nav">Previous</span> %title', 'handicraft' ), array( 'span' => array( 'class' => array() ) ) )
 			) );
 
 			// If comments are open or we have at least one comment, load up the comment template.

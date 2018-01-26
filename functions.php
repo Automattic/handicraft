@@ -185,6 +185,42 @@ function handicraft_scripts() {
 add_action( 'wp_enqueue_scripts', 'handicraft_scripts' );
 
 /**
+ * Return early if Jetpack Author Bio is not available.
+ */
+function handicraft_author_bio() {
+	if ( ! function_exists( 'jetpack_author_bio' ) ) {
+		get_template_part( 'template-parts/content', 'author' );
+	} else {
+		jetpack_author_bio();
+	}
+}
+
+/**
+ * Return early if Social Menu is not available.
+ */
+function handicraft_social_menu() {
+	if ( ! function_exists( 'jetpack_social_menu' ) ) {
+		return;
+	} else {
+		jetpack_social_menu();
+	}
+}
+
+/**
+* Custom function to get the URL of a post thumbnail;
+* If Jetpack is not available, fall back to wp_get_attachment_image_src()
+*/
+function handicraft_get_attachment_image_src( $post_id, $post_thumbnail_id, $size ) {
+	if ( function_exists( 'jetpack_featured_images_fallback_get_image_src' ) ) {
+		return jetpack_featured_images_fallback_get_image_src( $post_id, $post_thumbnail_id, $size );
+	} else {
+		$attachment = wp_get_attachment_image_src( $post_thumbnail_id, $size ); // Attachment array
+		$url = $attachment[0]; // Attachment URL
+		return $url;
+	}
+}
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

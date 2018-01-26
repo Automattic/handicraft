@@ -86,17 +86,6 @@ function handicraft_infinite_scroll_render() {
 }
 
 /**
- * Return early if Author Bio is not available.
- */
-function handicraft_author_bio() {
-	if ( ! function_exists( 'jetpack_author_bio' ) ) {
-		get_template_part( 'template-parts/content', 'author' );
-	} else {
-		jetpack_author_bio();
-	}
-}
-
-/**
  * Author Bio Avatar Size.
  */
 function handicraft_author_bio_avatar_size() {
@@ -104,27 +93,3 @@ function handicraft_author_bio_avatar_size() {
 }
 add_filter( 'jetpack_author_bio_avatar_size', 'handicraft_author_bio_avatar_size' );
 
-/**
- * Return early if Social Menu is not available.
- */
-function handicraft_social_menu() {
-	if ( ! function_exists( 'jetpack_social_menu' ) ) {
-		return;
-	} else {
-		jetpack_social_menu();
-	}
-}
-
-/**
-* Custom function to get the URL of a post thumbnail;
-* If Jetpack is not available, fall back to wp_get_attachment_image_src()
-*/
-function handicraft_get_attachment_image_src( $post_id, $post_thumbnail_id, $size ) {
-	if ( function_exists( 'jetpack_featured_images_fallback_get_image_src' ) ) {
-		return jetpack_featured_images_fallback_get_image_src( $post_id, $post_thumbnail_id, $size );
-	} else {
-		$attachment = wp_get_attachment_image_src( $post_thumbnail_id, $size ); // Attachment array
-		$url = $attachment[0]; // Attachment URL
-		return $url;
-	}
-}
