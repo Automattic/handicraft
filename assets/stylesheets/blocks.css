@@ -54,6 +54,17 @@ p.has-drop-cap:first-letter {
 .wp-block-cover-image {
 	margin: 0 0 1.6em;
 }
+.wp-block-cover-image h1,
+.wp-block-cover-image h2,
+.wp-block-cover-image h3,
+.wp-block-cover-image h4,
+.wp-block-cover-image h5,
+.wp-block-cover-image h6 {
+	font-weight: normal;
+}
+.wp-block-cover-image strong {
+	font-weight: bold;
+}
 .has-background-dim {}
 .has-parallax {}
 

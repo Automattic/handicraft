@@ -186,6 +186,10 @@ p.has-drop-cap:first-letter {
 .wp-block-cover-image h5,
 .wp-block-cover-image h6 {
 	color: #fff;
+	font-weight: normal;
+}
+.wp-block-cover-image .blocks-editable strong {
+	font-weight: bold;
 }
 .has-background-dim {}
 .has-parallax {}
