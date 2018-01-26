@@ -85,11 +85,15 @@ if ( ! function_exists( 'handicraft_setup' ) ) :
 			'wide-images' => true,
 			'colors'      => array(
 				'#eaa553',
+				'#a5671e',
 				'#4cb0c1',
+				'#19707f',
 				'#e06e53',
+				'#ac3f25',
 				'#9dbc71',
+				'#5c7b31',
 				'#ffffff',
-				'#444444',
+				'#222222',
 			),
 		) );
 	}
