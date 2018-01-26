@@ -191,6 +191,18 @@ p.has-drop-cap:first-letter {
 .wp-block-cover-image .blocks-editable strong {
 	font-weight: bold;
 }
+.wp-block-cover-image .blocks-editable a,
+.wp-block-cover-image .blocks-editable a:visited {
+	color: white;
+	opacity: 1;
+	transition: 0.3s opacity;
+}
+.wp-block-cover-image .blocks-editable a:hover,
+.wp-block-cover-image .blocks-editable a:focus,
+.wp-block-cover-image .blocks-editable a:active {
+	color: white;
+	opacity: 0.5;
+}
 .has-background-dim {}
 .has-parallax {}
 
