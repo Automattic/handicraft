@@ -89,6 +89,7 @@ if ( ! function_exists( 'handicraft_setup' ) ) :
 				'#e06e53',
 				'#9dbc71',
 				'#ffffff',
+				'#444444',
 			),
 		) );
 	}
