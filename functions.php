@@ -114,9 +114,8 @@ add_action( 'after_setup_theme', 'handicraft_content_width', 0 );
  */
 function handicraft_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'handicraft' ),
+		'name'          => esc_html__( 'Footer Widgets', 'handicraft' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'handicraft' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
